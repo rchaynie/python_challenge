@@ -1,22 +1,16 @@
 import csv
 import os
-from itertools import groupby
-import operator
 
 path=os.path.join("Resources","election_data.csv")
 
 
 vote_total=0
-
 khan_list=[]
 khan_vote=0
-
 correy_list=[]
 correy_vote=0
-
 li_list=[]
 li_vote=0
-
 otooley_list=[]
 otooley_vote=0
 
@@ -51,9 +45,21 @@ for row in otooley_list:
 khan_per=format((khan_vote/vote_total)*100,".3f")
 correy_per=format((correy_vote/vote_total)*100,".3f")
 li_per=format((li_vote/vote_total)*100,".3f")
-otooley_per=format((otooley_vote/vote_total)*100,".3f") 
+otooley_per=format((otooley_vote/vote_total)*100,".3f")
 
-print("Election Results \n --------------------------")
+# who is the winning candidate
+
+winner_var= {
+    khan_vote:"Khan",
+    correy_vote:"Correy",
+    li_vote:"Li",
+    otooley_vote: "O'tooley"
+}
+
+winner=winner_var.get(max(winner_var))
+
+
+print("Election Results \n--------------------------")
 print(f"Total Votes: {vote_total}")
 print("--------------------------")
 print(f"Khan: {khan_per}% ({khan_vote})")    
@@ -61,7 +67,7 @@ print(f"Correy: {correy_per}% ({correy_vote})")
 print(f"Li: {li_per}% ({li_vote})")
 print(f"O'Tooley: {otooley_per}% ({otooley_vote})")
 print("--------------------------")
-print(f"Winner: ______")
+print(f"Winner: {winner}")
     
     
         
