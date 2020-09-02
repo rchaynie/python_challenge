@@ -69,22 +69,22 @@ print(f"O'Tooley: {otooley_per}% ({otooley_vote})")
 print("--------------------------")
 print(f"Winner: {winner}")
     
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       
-
+results=("Election Results \n--------------------------\n"
+f"Total Votes: {vote_total}\n"
+f"--------------------------\n"
+f"Khan: {khan_per}% ({khan_vote})\n"  
+f"Correy: {correy_per}% ({correy_vote})\n"
+f"Li: {li_per}% ({li_vote})\n"
+f"O'Tooley: {otooley_per}% ({otooley_vote})\n"
+f"--------------------------\n"
+f"Winner: {winner}")
     
     
-#     for row in dict_reader:
-#         vote_total+=1
+file_to_output="analysis/voting_results.txt"
+        
+     
     
-# for row in unique_can:
-#     print(row)
+    
+    
+with open(file_to_output, "w") as txt_file:
+    txt_file.write(results)
