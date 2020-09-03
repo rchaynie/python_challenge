@@ -59,6 +59,19 @@ print(f"Greatest Decrease in Profits: {worst_month} (${min_change:0.2f})")
 
         
 
+results=(f"Total Months: {total_months} \n"      
+f"Total: ${total_prof}\n"
+f"Average change: ${avg_change:0.2f}\n"
+f"Greatest Increase in Profits: {best_month} (${max_change:0.2f})\n"
+f"Greatest Decrease in Profits: {worst_month} (${min_change:0.2f})\n")
 
+file_to_output="analysis/profit_results.txt"
+        
+     
+    
+    
+    
+with open(file_to_output, "w") as txt_file:
+    txt_file.write(results)
 
 

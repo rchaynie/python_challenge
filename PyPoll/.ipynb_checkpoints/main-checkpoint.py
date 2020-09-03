@@ -61,14 +61,15 @@ winner=winner_var.get(max(winner_var))
 
 print("Election Results \n--------------------------")
 print(f"Total Votes: {vote_total}")
-print("--------------------------")
-print(f"Khan: {khan_per}% ({khan_vote})")    
+print(f"--------------------------")
+print(f"Khan: {khan_per}% ({khan_vote})")  
 print(f"Correy: {correy_per}% ({correy_vote})")
 print(f"Li: {li_per}% ({li_vote})")
 print(f"O'Tooley: {otooley_per}% ({otooley_vote})")
-print("--------------------------")
+print(f"--------------------------")
 print(f"Winner: {winner}")
-    
+     
+
 results=("Election Results \n--------------------------\n"
 f"Total Votes: {vote_total}\n"
 f"--------------------------\n"
